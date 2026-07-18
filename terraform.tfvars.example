@@ -1,0 +1,10 @@
+# Copy this file to terraform.tfvars and fill in your real values.
+# terraform.tfvars is gitignored — never commit real secrets.
+
+key_pair_name = "task-tracker-key"   # an existing EC2 key pair name in your AWS account
+my_ip_cidr    = "1.2.3.4/32"         # your current public IP + /32 — check via `curl ifconfig.me`
+
+# Do NOT put db_password here if this file might be committed.
+# Prefer setting it via environment variable instead:
+#   $env:TF_VAR_db_password = "your-strong-password-here"    (PowerShell)
+db_password = "CHANGE_ME_STRONG_PASSWORD"
